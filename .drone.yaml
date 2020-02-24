@@ -9,3 +9,12 @@ steps:
       tags: v1
       json_key:
         from_secret: google_credentials
+
+## 載入 docker config 設定
+image_pull_secrets:
+  - dockerconfigjson
+
+# 觸發 pipeline 條件
+trigger:
+  ref:
+    include: [refs/heads/develop, refs/heads/qatest, refs/heads/int, refs/tags/v*, refs/tags/t*, refs/tags/release-v*]
