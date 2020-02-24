@@ -3,7 +3,7 @@ type: docker
 name: default
 
 steps:
-- name: publish
+- name: publish to gcr
   image: plugins/gcr
   settings:
     repo: project/foo
@@ -13,7 +13,6 @@ steps:
 ## 載入 docker config 設定
 image_pull_secrets:
   - dockerconfigjson
-
 # 觸發 pipeline 條件
 trigger:
   ref:
