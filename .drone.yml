@@ -6,8 +6,8 @@ steps:
 - name: publish to gcr
   image: plugins/gcr
   settings:
-    repo: project/foo
-    tags: latest
+    repo: gcr.io/k8s-0529/ubuntu
+    tags: v1
     json_key:
       from_secret: google_credentials
 ## 載入 docker config 設定
